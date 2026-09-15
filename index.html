@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Derick Billionaires Club</title>
+  <style>
+    :root {
+      --gold: #f6d365;
+      --gold-deep: #b8860b;
+      --ink: #111827;
+      --cream: #fff9e8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(53, 91, 59, .35), transparent 35%),
+        linear-gradient(135deg, #071b12, #123d24 55%, #06150d);
+    }
+
+    .scene {
+      position: relative;
+      width: min(1100px, 92vw);
+      min-height: 650px;
+      padding: clamp(2rem, 6vw, 5rem);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      isolation: isolate;
+    }
+
+    .scene::before {
+      content: "";
+      position: absolute;
+      inset: 1rem;
+      z-index: -1;
+      border: 1px solid rgba(246, 211, 101, .45);
+      border-radius: 28px;
+      background: rgba(3, 17, 10, .5);
+      box-shadow: 0 0 70px rgba(246, 211, 101, .12), inset 0 0 45px rgba(0, 0, 0, .35);
+    }
+
+    .content { max-width: 720px; }
+
+    .eyebrow {
+      color: var(--gold);
+      font: 700 .78rem/1.2 Arial, sans-serif;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 1.2rem 0;
+      color: var(--gold);
+      font-size: clamp(3.3rem, 9vw, 7.5rem);
+      line-height: .92;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, .45);
+    }
+
+    h1 span { display: block; color: var(--cream); font-size: .52em; }
+
+    p {
+      margin: 0 auto 2rem;
+      color: #d7e5d9;
+      font: 1.05rem/1.7 Arial, sans-serif;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      color: var(--ink);
+      background: linear-gradient(135deg, #fff1a8, var(--gold));
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+      font: 800 .85rem Arial, sans-serif;
+      letter-spacing: .12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .button:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+    .money {
+      position: absolute;
+      z-index: -1;
+      width: 155px;
+      height: 78px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #9b7620;
+      border-radius: 8px;
+      color: #315a35;
+      background: linear-gradient(135deg, #d9f3be, #83bd77);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, .35);
+      font: 700 2.7rem Georgia, serif;
+    }
+
+    .money::after {
+      content: "UNITED STATES OF WEALTH";
+      position: absolute;
+      bottom: 6px;
+      color: #315a35;
+      font: 600 .36rem Arial, sans-serif;
+      letter-spacing: .08em;
+    }
+
+    .one { top: 11%; left: 4%; transform: rotate(-18deg); }
+    .two { top: 15%; right: 3%; transform: rotate(16deg); }
+    .three { bottom: 12%; left: 7%; transform: rotate(13deg); }
+    .four { right: 6%; bottom: 9%; transform: rotate(-14deg); }
+
+    @media (max-width: 650px) {
+      .scene { min-height: 590px; }
+      .money { width: 110px; height: 58px; font-size: 2rem; }
+      .money::after { font-size: .27rem; }
+      .one { left: -2%; } .two { right: -2%; }
+      .three { left: -3%; } .four { right: -3%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="scene">
+    <div class="money one">$</div>
+    <div class="money two">$</div>
+    <div class="money three">$</div>
+    <div class="money four">$</div>
+
+    <section class="content">
+      <div class="eyebrow">Exclusive access • Exceptional ambition</div>
+      <h1><span>Welcome to</span>Derick Billionaires Club</h1>
+      <p>
+        Where bold vision meets extraordinary opportunity. Step into a world
+        built for people who think bigger, move smarter, and create lasting wealth.
+      </p>
+      <a class="button" href="#welcome">Enter the Club</a>
+    </section>
+  </main>
+</body>
+</html>
